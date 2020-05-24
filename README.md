@@ -4,6 +4,8 @@
 
 This is just an experiment to see if I can externalize my (equally experimental) [hugo] [shortcodes].  
 
+You can see some of them in action [on my blog](https://blog.jemu.name/shortcodes/), but keep in mind that their appearance is largely dependant on my blog's CSS.
+
 The idea is to leverage hugo's [theme components] to re-use these shortcodes across different projects just by cloning (or better: `git submodule`'ing) this repository into a site's `/themes/` directory and then change `config.toml` from e.g.
 
 ```toml
