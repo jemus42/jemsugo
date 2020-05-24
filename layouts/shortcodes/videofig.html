@@ -10,6 +10,7 @@ https://github.com/gohugoio/hugo/blob/aba2647c152ffff927f42523b77ee6651630cd67/t
     {{ if .Get "autoplay" | eq true }} autoplay {{ end }}
     {{ if .Get "loop" | ne false }} muted {{ end }}
     {{ if .Get "controls" | ne false }} controls {{ end }}
+    preload="auto"
   >
     {{ with .Get "mp4" }}<source src="{{.}}" type="video/mp4">{{ end }}
     {{ with .Get "ogg" }}<source src="{{.}}" type="video/ogg">{{ end }}
