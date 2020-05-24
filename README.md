@@ -19,7 +19,7 @@ theme = ["jemsugo", "hugo-coder"]
 This makes it possible to use these shortcodes without having to copy paste them into a site's `/layouts/shortcodes` _and_ without having to add them to a specific theme.  
 According to my quick testing, it works quite nicely.  
 
-Install this as a submodule via `git submodule add git@github.com:jemus42/jemsugo.git themes/jemsugo` (or use the HTTPS clone URL).  
+Install this as a submodule via `git submodule add https://github.com/jemus42/jemsugo.git themes/jemsugo`  
 To update (all) submodules, use `git submodule update --rebase --remote`
 
 ## Included shortcodes
