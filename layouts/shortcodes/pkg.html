@@ -8,5 +8,5 @@
   {{ print .Site.Params.pkg_icon_git | safeHTML }}
 {{ end }}
 <a href="{{ $url }}" alt = "{{ $pkg.name }}">{{ (printf (.Site.Params.pkg_format) $pkg.name) | safeHTML }}</a>
-<span class="tooltip">{{ $pkg.title }}{{ if not $pkg.url_cran }}<br>(Not on CRAN){{ end }}</span>
+<span class="tooltip">{{ $pkg.title }}</span>
 </span>
