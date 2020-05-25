@@ -12,6 +12,6 @@
 {{ else }}
   {{ with  .Site.Params.pkg_icon_git }} <a href="{{ $pkg.url_git }}" alt="Repository link">{{ . | safeHTML }}</a>{{ end }}
 {{ end }}
-<a href="{{ $url }}" alt = "{{ $pkg.name }}">{{ (printf (.Site.Params.pkg_format) $pkg.name) | safeHTML }}</a>
+<a href="{{ $url }}" alt = "{{ $pkg.name }}">{{ (printf (.Site.Params.pkg_format) (.Get 0)) | safeHTML }}</a>
 <span class="tooltip">{{ $pkg.title }}</span>
 </span>
