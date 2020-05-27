@@ -23,7 +23,7 @@ theme = ["jemsugo", "hugo-coder"]
 
 To later update (all) submodules, use `git submodule update --rebase --remote`
 
-### Via Hugo modules (no `git` needed)
+### Via Hugo modules
 
 If you're going the [Hugo module route](https://blog.jemu.name/2020/05/hugo-theme-components-modules/#switching-to-hugo-modules), add to your `config.toml`
 
