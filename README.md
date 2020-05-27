@@ -4,25 +4,34 @@
 
 This is just an experiment to see if I can externalize my (equally experimental) [hugo] [shortcodes].  
 
-You can see some of them in action [on my blog](https://blog.jemu.name/shortcodes/), but keep in mind that their appearance is largely dependant on my blog's CSS.
+You can see them in action [on my blog's shortcode showcase I use for testing](https://blog.jemu.name/shortcodes/), but keep in mind that their appearance is largely dependant on my blog's CSS.
 
-The idea is to leverage hugo's [theme components] to re-use these shortcodes across different projects just by cloning (or better: `git submodule`'ing) this repository into a site's `/themes/` directory and then change `config.toml` from e.g.
+## Installation
+
+The idea is to leverage hugo's [theme components] or Hugo modules to re-use these shortcodes across different projects. See [my recent blog post](https://blog.jemu.name/2020/05/hugo-theme-components-modules) for more information.
+
+### Via `git` submodules as theme components
+
+Install this as a submodule via `git submodule add https://github.com/jemus42/jemsugo.git themes/jemsugo` and change your `config.toml`
 
 ```toml
+# From (substitute your theme name)
 theme = "hugo-coder"
-```
-
-to
-
-```toml
+# To
 theme = ["jemsugo", "hugo-coder"]
 ```
 
-This makes it possible to use these shortcodes without having to copy paste them into a site's `/layouts/shortcodes` _and_ without having to add them to a specific theme.  
-According to my quick testing, it works quite nicely.  
+To later update (all) submodules, use `git submodule update --rebase --remote`
 
-Install this as a submodule via `git submodule add https://github.com/jemus42/jemsugo.git themes/jemsugo`  
-To update (all) submodules, use `git submodule update --rebase --remote`
+### Via Hugo modules (no `git` needed)
+
+If you're going the [Hugo module route](https://blog.jemu.name/2020/05/hugo-theme-components-modules/#switching-to-hugo-modules), add to your `config.toml`
+
+```toml
+[module]
+  [[module.imports]]
+    path = "github.com/jemus42/jemsugo"
+```
 
 ## Included shortcodes
 
@@ -123,7 +132,7 @@ Some long content
 A variation of the `figure` shortcode that wraps a `video` tag, but also with caption etc.
 
 ```html
-{{< videofig mp4="my-file.mp4" loop=true autoplay=true alt="" caption="" >}}
+{{< videofig mp4="my-file.mp4" loop=true autoplay=true caption="" >}}
 ```
 
 ### `wp` (not my own)
