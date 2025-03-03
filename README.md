@@ -135,14 +135,6 @@ A variation of the `figure` shortcode that wraps a `video` tag, but also with ca
 {{< videofig mp4="my-file.mp4" loop=true autoplay=true caption="" >}}
 ```
 
-### `wp` (not my own)
-
-Wikipedia link genertor shortcode for Hugo  
-Based on https://github.com/keltia/octopress/commit/17b975067ff86c0c7cddac4ae2c2c975b0790b6e  
-Author: Parsia Hakimian https://github.com/parsiya/Hugo-Shortcodes
-
-Also included because it looked neat and to learn from.
-
 ### `wrapfigure`
 
 Wrap arbitrary content inside `<figure>` with, you guessed it, caption and stuff.
